@@ -2,9 +2,12 @@
 let names = [];
 
 // Fetch names from names_list.txt
-fetch('names_list.txt')
-    .then(response => response.text())
-    .then(data => {
+async function loadNames() {
+    try {
+        const response = await fetch('names_list.txt');
+        if (!response.ok) throw new Error('Failed to load names');
+        const data = await response.text();
+
         // Parse the text file to extract names
         names = data
             .split('\n')
@@ -12,8 +15,20 @@ fetch('names_list.txt')
             .filter(line => line.length > 0)
             .map(line => line.replace(/[",]/g, '').trim())
             .filter(line => line.length > 0);
-    })
-    .catch(error => console.error('Error loading names:', error));
+
+        console.log('Names loaded:', names);
+    } catch (error) {
+        console.error('Error loading names:', error);
+        // Fallback to hardcoded names if fetch fails
+        names = [
+            "Kien", "Alvi", "Kipras", "Anton", "Sofia", "Madu", "Mat", "Jakub",
+            "Joseph", "Mustafa", "Derya", "Dji", "Hannah", "Umrah", "Sajjad", "Mateo"
+        ];
+    }
+}
+
+// Load names when page loads
+document.addEventListener('DOMContentLoaded', loadNames);
 
 const questions = [
     "What is your absolute favorite movie of all time?",
