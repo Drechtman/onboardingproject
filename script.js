@@ -3,7 +3,6 @@ const names = [
     "Kien", 
     "Alvi",
     "Kipras",
-    "Ian",
     "Anton",
     "Sofia",
     "Madu",
@@ -17,6 +16,8 @@ const names = [
     "Umrah",
     "Sajjad",
     "Mateo",
+    "Lakhmi",
+    "Tom",
 ];
 
 const questions = [
