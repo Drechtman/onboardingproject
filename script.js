@@ -28,7 +28,11 @@ const questions = [
     "What is your most used emoji?",
     "If you could live in any fictional universe, which one would you choose?",
     "What's the best piece of advice you've ever received?",
-    "Are you a morning person or a night owl?"
+    "Are you a morning person or a night owl?",
+    "If you could instantly master any skill, what would it be?",
+    "What's your go-to karaoke song?",
+    "Have you ever had a completely random encounter that turned into a lifelong friendship?",
+    "If you could swap lives with any historical figure for a day, who would it be and why?",
 ];
 
 // DOM Elements
