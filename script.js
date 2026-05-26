@@ -1,24 +1,19 @@
 // Data pools
-const names = [
-    "Kien", 
-    "Alvi",
-    "Kipras",
-    "Anton",
-    "Sofia",
-    "Madu",
-    "Mat",
-    "Jakub",
-    "Joseph",
-    "Mustafa",
-    "Derya",
-    "Dji",
-    "Hannah",
-    "Umrah",
-    "Sajjad",
-    "Mateo",
-    "Lakhmi",
-    "Tom",
-];
+let names = [];
+
+// Fetch names from names_list.txt
+fetch('names_list.txt')
+    .then(response => response.text())
+    .then(data => {
+        // Parse the text file to extract names
+        names = data
+            .split('\n')
+            .map(line => line.trim())
+            .filter(line => line.length > 0)
+            .map(line => line.replace(/[",]/g, '').trim())
+            .filter(line => line.length > 0);
+    })
+    .catch(error => console.error('Error loading names:', error));
 
 const questions = [
     "What is your absolute favorite movie of all time?",
