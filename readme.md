@@ -1,1 +1,1 @@
-This program takes in names from name_list.txt and returns a question with two names.
+This program takes in names from and returns an icebreaker question with one or two names.
