@@ -1,7 +1,22 @@
 // Data pools
 const names = [
-    "Kien", "Anton", "Sejjad", "Morgan", "Sam", 
-    "Jamie", "Casey", "Robin", "Skyler", "Charlie"
+    "Kien", 
+    "Alvi",
+    "Kipras",
+    "Ian",
+    "Anton",
+    "Sofia",
+    "Madu",
+    "Mat",
+    "Jakub",
+    "Joseph",
+    "Mustafa",
+    "Derya",
+    "Dji",
+    "Hannah",
+    "Umrah",
+    "Sajjad",
+    "Mateo",
 ];
 
 const questions = [
